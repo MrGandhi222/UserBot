@@ -41,7 +41,7 @@ if version_info[0] < 3 or version_info[1] < 6:
 
 # Check if the config was edited by using the already used variable
 CONFIG_CHECK = os.environ.get(
-    "___________PLOX_______REMOVE_____THIS_____LINE__________") or None
+    "") or None
 
 if CONFIG_CHECK:
     LOGS.error("Please remove the line mentioned in the first \
@@ -103,7 +103,7 @@ WOLFRAM_ID = os.environ.get("WOLFRAM_ID") or None
 if STRING_SESSION:
     bot = TelegramClient(StringSession(STRING_SESSION), API_KEY, API_HASH)
 else:
-    bot = TelegramClient("userbot", API_KEY, API_HASH)
+    bot = TelegramClient("userbot", "1631377", "b7df5c0d45176bfc04166f11c6754b4b")
 
 
 async def check_botlog_chatid():
